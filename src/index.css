@@ -47,7 +47,6 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 1em 2em;
-  background-color: rgba(0, 0, 0, 0.7);
   position: sticky;
   top: 0;
   z-index: 10;
@@ -137,46 +136,4 @@ button:focus-visible {
   }
 }
 
-main {
-  color: #fff;
-  width: 100%;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
 
-tr {
-  border-radius: 10px;
-  background-color: #000;
-  color: white;
-}
-
-tbody tr:nth-child(odd) {
-  background-color: #333333;
-}
-
-.nav {
-  display: flex;
-  justify-content: flex-start;
-  padding: 1em 2em;
-}
-
-.nav-item {
-  padding: 0 0.5rem;
-  list-style: none;
-}
-
-.nav-link {
-  color: #fff;
-  text-decoration: none;
-}
-
-.active {
-  font-weight: 700;
-}
-
-.table {
-  width: 80vw;
-  table-layout: fixed;
-} 
