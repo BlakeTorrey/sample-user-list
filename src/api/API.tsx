@@ -1,5 +1,8 @@
+
+
 const searchGithub = async () => {
   try {
+    console.log(import.meta.env);
     const start = Math.floor(Math.random() * 100000000) + 1;
     // console.log(import.meta.env);
     const response = await fetch(
@@ -36,7 +39,7 @@ const searchGithubUser = async (username: string) => {
     }
     return data;
   } catch (err) {
-    // console.log('an error occurred', err);
+    console.log('an error occurred', err);
     return {};
   }
 };
