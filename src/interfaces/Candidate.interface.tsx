@@ -1,5 +1,5 @@
 export interface Candidate {
-    avatar_URL: string;
+    avatar_url: string;
     name: string | null;
     login: string;
     location: string | null;

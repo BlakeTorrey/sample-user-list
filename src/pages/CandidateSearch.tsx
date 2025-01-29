@@ -61,7 +61,7 @@ const CandidateSearch: React.FC<HomeProps> = ({ onSaveCandidate }) => {
 
   return (
     <div>
-      <h1>CandidateSearch</h1>;
+      <h1>Candidate Search</h1>
 
       {error && <p style={{ color: "red" }}>{error}</p>}
 
@@ -69,7 +69,7 @@ const CandidateSearch: React.FC<HomeProps> = ({ onSaveCandidate }) => {
         <div style={{ marginTop: "20px", border: "1px solid #ccc", padding: "10px" }}>
           <h2>{selectedCandidate.name || "Name not available"}</h2>
           <img
-            src={selectedCandidate.avatar_URL}
+            src={selectedCandidate.avatar_url}
             alt={selectedCandidate.login}
             style={{ width: "100px", borderRadius: "50%" }}
           />
