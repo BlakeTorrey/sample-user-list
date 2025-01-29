@@ -6,13 +6,11 @@ interface HomeProps {
   onSaveCandidate: (candidate: Candidate) => void;
 }
 
-
 const CandidateSearch: React.FC<HomeProps> = ({ onSaveCandidate }) => {
-  const [users, setUsers] = useState<any[]>([]);
+  const [users, setUsers] = useState<Candidate[]>([]);
   const [currentCandidateIndex, setCurrentCandidateIndex] = useState<number>(0);
   const [selectedCandidate, setSelectedCandidate] = useState<Candidate | null>(null);
   const [error, setError] = useState<string>("");
-
 
   useEffect(() => {
     const fetchUsers = async () => {
@@ -37,7 +35,10 @@ const CandidateSearch: React.FC<HomeProps> = ({ onSaveCandidate }) => {
 
   const handleSaveCandidate = () => {
     if (selectedCandidate) {
-      onSaveCandidate(selectedCandidate);
+      const savedCandidates = JSON.parse(localStorage.getItem('savedCandidates') || '[]');
+      const updatedCandidates = [...savedCandidates, selectedCandidate];
+      localStorage.setItem('savedCandidates', JSON.stringify(updatedCandidates));
+      onSaveCandidate(selectedCandidate); 
       setSelectedCandidate(null);
       goToNextCandidate();
     }
@@ -57,7 +58,6 @@ const CandidateSearch: React.FC<HomeProps> = ({ onSaveCandidate }) => {
   }
 
   const currentCandidate = users[currentCandidateIndex];
-
 
   return (
     <div>
