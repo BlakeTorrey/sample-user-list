@@ -55,18 +55,18 @@ This application allows you to search for candidates on GitHub, view their infor
 1. Clone the repository
 
 2. Install the dependencies:
-   ```json
+   ```
    npm install
    ```
 
 3. Set-up your enviornment variables.
    The name of the variable must be as follows.
-   ```json
+   ```
    VITE_GITHUB_TOKEN=<your-github-api-token>
    ```
 
 4. Start the application
-   ```json
+   ```
    npm run build
    ```
 
