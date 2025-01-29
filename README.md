@@ -31,15 +31,15 @@ This application allows you to search for candidates on GitHub, view their infor
 
 ### Rejecting Candidates
 
-**WHEN** I click the "-" button  
+**WHEN** I click the "reject" button  
 **THEN** the next candidate's information should be displayed without saving the current candidate.
 
 ## Features
 
 - Search for candidates randomly from the GitHub API.
 - View detailed information about each candidate (name, username, location, avatar, email, company, etc.).
-- Save potential candidates to a list with the "+" button.
-- Reject candidates with the "-" button, skipping them and moving to the next candidate.
+- Save potential candidates to a list.
+- Reject candidates with the "reject" button, skipping them and moving to the next candidate.
 - View a list of saved candidates on a separate page with all their details.
 - The list of saved candidates persists across page reloads.
 
@@ -52,6 +52,25 @@ This application allows you to search for candidates on GitHub, view their infor
 
 ### Installation
 
-1. Clone the repository:
-   ```bash
-   git clone <repository-url>
+1. Clone the repository
+
+2. Install the dependencies:
+   ```json
+   npm install
+   ```
+
+3. Set-up your enviornment variables.
+   The name of the variable must be as follows.
+```json
+VITE_GITHUB_TOKEN=<your-github-api-token>
+```
+
+4. Start the application
+   ```json
+   npm run build
+   ```
+
+## Image
+![screenshotlistdemo](./public/Screenshot%202025-01-28%20220226.png)
+
+
