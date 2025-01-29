@@ -16,6 +16,11 @@ function App() {
     setSavedCandidates((prev) => [...prev, candidate]);
   };
 
+  const handleRemoveCandidate = (candidateToRemove: Candidate) => {
+
+    setSavedCandidates((prev) => prev.filter((candidate) => candidate.login !== candidateToRemove.login));
+  }
+
 
   return (
     <Router>
@@ -23,7 +28,7 @@ function App() {
       <main>
         <Routes>
           <Route path="/" element={<CandidateSearch onSaveCandidate={handleSaveCandidate} />} />
-          <Route path="/SavedCandidates" element={<SavedCandidates savedCandidates={savedCandidates} />} />
+          <Route path="/SavedCandidates" element={<SavedCandidates savedCandidates={savedCandidates} onRemoveCandidate={handleRemoveCandidate}/>} />
           <Route path="*" element={<ErrorPage />} />
         </Routes>
       </main>
