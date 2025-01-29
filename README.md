@@ -61,9 +61,9 @@ This application allows you to search for candidates on GitHub, view their infor
 
 3. Set-up your enviornment variables.
    The name of the variable must be as follows.
-```json
-VITE_GITHUB_TOKEN=<your-github-api-token>
-```
+   ```json
+   VITE_GITHUB_TOKEN=<your-github-api-token>
+   ```
 
 4. Start the application
    ```json
